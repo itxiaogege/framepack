@@ -1,0 +1,51 @@
+# 图片占位符URLs
+
+以下是项目中使用的图片占位符URLs，可以将这些URL替换为实际的图片：
+
+## 视频缩略图
+
+1. 文本生成视频1:
+https://via.placeholder.com/600x400?text=文本到视频案例1
+
+2. AI场景生成1:
+https://via.placeholder.com/600x400?text=AI场景生成1
+
+3. 音频视觉化1:
+https://via.placeholder.com/600x400?text=音频视觉化1
+
+4. 高级视频定制1:
+https://via.placeholder.com/600x400?text=高级视频定制1
+
+5. 文本生成视频2:
+https://via.placeholder.com/600x400?text=文本到视频案例2
+
+6. 商业案例1:
+https://via.placeholder.com/600x400?text=商业案例1
+
+7. AI场景生成2:
+https://via.placeholder.com/600x400?text=AI场景生成2
+
+8. 音频视觉化2:
+https://via.placeholder.com/600x400?text=音频视觉化2
+
+9. 高级视频定制2:
+https://via.placeholder.com/600x400?text=高级视频定制2
+
+## 其他图片
+
+1. 创建自己的视频:
+https://via.placeholder.com/600x400?text=创建自己的视频
+
+## 实际应用说明
+
+在实际应用中，您应该将这些占位符URL替换为实际的图片文件路径，例如：
+
+```html
+<!-- 将占位符URL: -->
+<img src="https://via.placeholder.com/600x400?text=文本到视频案例1" alt="文本到视频案例">
+
+<!-- 替换为实际图片: -->
+<img src="images/text-to-video-1.jpg" alt="文本到视频案例">
+```
+
+图片推荐尺寸为600x400像素，以确保最佳显示效果。 
