@@ -1,0 +1,74 @@
+# FramePack - Revolutionary AI Video Generator
+
+## Project Overview
+FramePack is an advanced AI video generation tool that uses "frame packing" technology to transform text descriptions and images into high-quality video content. Powered by a 13B parameter model, it can generate smooth, coherent video sequences.
+
+## Technical Features
+- **Frame Packing Technology**: Uses a special neural network structure to compress the context information of generated frames to a fixed length
+- **Constant Workload**: Regardless of video length, the complexity of generating each frame remains constant
+- **Efficient Memory Management**: Only 6GB VRAM needed to generate videos up to one minute long
+- **Large-Scale Model**: Employs a 13B parameter model for precise rendering
+
+## Core Functions
+1. **Text to Video**: Convert text descriptions into smooth videos
+2. **Scene Generation**: Create complex scenes and environments with AI
+3. **Audio Integration**: Seamlessly match visuals with audio content
+4. **Custom Styling**: Advanced customization options to adjust video style
+
+## Tech Stack
+- Python
+- PyTorch
+- CUDA
+- Only requires 6GB VRAM
+- 13B parameter model
+
+## Installation and Usage
+### Windows Installation
+1. Download the one-click installer (CUDA 12.6 + PyTorch 2.6)
+2. Extract the downloaded file
+3. Run `update.bat` to get the latest version
+4. Run `run.bat` to start the application
+
+### Linux Installation
+Recommended to use a separate Python 3.10 environment:
+```
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+pip install -r requirements.txt
+
+# Launch GUI
+python demo_gradio.py
+```
+
+## Prompt Writing Guide
+Quality prompts are key to generating high-quality videos. Suggested structure:
+```
+[Subject] [Action Description] [Action Details], [Environment/Background Description]
+```
+
+### Prompt Examples
+- "The girl dances gracefully, with clear movements, full of charm."
+- "The man dances powerfully, striking sharp poses and gliding smoothly across the reflective floor."
+- "The woman dances elegantly among the blossoms, spinning slowly with flowing sleeves and graceful hand movements."
+
+## Parameter Optimization
+| Parameter | Recommended Value | Description |
+|------|--------|------|
+| Sampling Steps | 25-50 | Higher steps = better quality, but slower speed |
+| TeaCache | Enable during development | 30% faster, but may slightly impact quality |
+| Seed | Random or fixed | Fixed seed allows result reproducibility |
+| CFG Scale | 7-9 | Controls prompt influence strength |
+| Video Length | 5-60 seconds | Shorter videos typically maintain better coherence |
+
+## Citation Information
+```
+@article{zhang2025framepack,
+    title={Packing Input Frame Contexts in Next-Frame Prediction Models for Video Generation},
+    author={Lvmin Zhang and Maneesh Agrawala},
+    journal={Arxiv},
+    year={2025}
+}
+```
+
+## Project Links
+- Website: https://www.framepack.work
+- Source code: https://github.com/lllyasviel/FramePack 

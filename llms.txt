@@ -1,0 +1,12 @@
+FramePack is a revolutionary AI video generator that creates high-quality videos using a 13B parameter model and Frame Packing technology.
+
+Supported features:
+- Text to video generation
+- Scene generation
+- Audio integration
+- Custom styling
+- Only requires 6GB VRAM
+- Supports videos up to one minute long
+
+Website: https://www.framepack.work
+Source code: https://github.com/lllyasviel/FramePack 
