@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /404
+Disallow: /500
+LLM-Content: https://www.framepack.work/llms.txt
+LLM-Full-Content: https://www.framepack.work/llms-full.txt
 Sitemap: https://www.framepack.work/sitemap.xml
