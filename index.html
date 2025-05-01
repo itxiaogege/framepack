@@ -586,6 +586,27 @@
         font-size: 2rem;
     }
 }
+
+.language-switch {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.language-switch:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.language-switch i {
+    width: 16px;
+    height: 16px;
+}
     </style>
 </head>
 <body>
@@ -612,13 +633,18 @@
                 </div>
                 <ul class="navbar-nav d-none d-lg-flex">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index.html" class="nav-link" data-i18n="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#features" class="nav-link">Features</a>
+                        <a href="#features" class="nav-link" data-i18n="features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#tutorial" class="nav-link">tutorial</a>
+                        <a href="#tutorial" class="nav-link" data-i18n="tutorial">tutorial</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="languageSwitch" class="nav-link language-switch">
+                            <i data-lucide="globe"></i> <span data-i18n="switchToJapanese">日本語</span>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -628,11 +654,11 @@
     <!-- Page Header -->
     <section class="example-header animate">
         <div class="container">
-            <h1 class="enhanced-title">FramePack: Revolutionary AI Video Generation</h1>
-            <h2 class="subtitle">Transform Text and Images into Professional Videos with Advanced Next-Frame Prediction</h2>
+            <h1 class="enhanced-title" data-i18n="title">FramePack: Revolutionary AI Video Generation</h1>
+            <h2 class="subtitle" data-i18n="subtitle">Transform Text and Images into Professional Videos with Advanced Next-Frame Prediction</h2>
             <div class="cta-buttons">
-                <a href="https://github.com/lllyasviel/FramePack" target="_blank" class="cta-button">Get Source Code</a>
-                <a href="#tutorial" class="cta-button cta-secondary">View Tutorial</a>
+                <a href="https://github.com/lllyasviel/FramePack" target="_blank" class="cta-button" data-i18n="getSourceCode">Get Source Code</a>
+                <a href="#tutorial" class="cta-button cta-secondary" data-i18n="viewTutorial">View Tutorial</a>
             </div>
             <div class="tech-badges">
                 <span class="tech-badge">Python</span>
