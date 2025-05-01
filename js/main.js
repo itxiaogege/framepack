@@ -23,6 +23,27 @@ function initializeApp() {
 
     // Setup smooth scrolling for navigation links
     setupSmoothScrolling();
+
+    // Set default language to English for index.html
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
+        currentLanguage = 'en';
+        updateLanguage('en');
+    } else {
+        // Load saved language preference for other pages
+        const savedLanguage = localStorage.getItem('preferredLanguage');
+        if (savedLanguage) {
+            updateLanguage(savedLanguage);
+        }
+    }
+
+    // Add language switch event listener
+    const languageSwitch = document.getElementById('languageSwitch');
+    if (languageSwitch) {
+        languageSwitch.addEventListener('click', function() {
+            const newLang = currentLanguage === 'en' ? 'ja' : 'en';
+            updateLanguage(newLang);
+        });
+    }
 }
 
 // Get time and display in status bar
@@ -124,4 +145,48 @@ function loadContent(url, targetElement) {
             console.error('Error loading content:', error);
             targetElement.innerHTML = '<p class="error-message">Content loading failed. Please try again later.</p>';
         });
+}
+
+let currentLanguage = 'en';
+
+function updateLanguage(lang) {
+    currentLanguage = lang;
+    const elements = document.querySelectorAll('[data-i18n]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+
+    // Update language switch button text
+    const languageSwitch = document.getElementById('languageSwitch');
+    if (languageSwitch) {
+        languageSwitch.innerHTML = `<i data-lucide="globe"></i> ${translations[lang].switchToJapanese}`;
+        lucide.createIcons();
+    }
+
+    // Save language preference
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+function playVideo(videoElement) {
+    if (videoElement) {
+        try {
+            videoElement.play().catch(error => {
+                console.error('Error playing video:', error);
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'error-message';
+                errorMessage.textContent = translations[currentLanguage].videoPlayer.error;
+                videoElement.parentNode.appendChild(errorMessage);
+            });
+        } catch (error) {
+            console.error('Error playing video:', error);
+        }
+    }
 } 

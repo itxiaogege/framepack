@@ -1,22 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- English Version -->
+    <url>
+        <loc>https://www.framepack.work/</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.framepack.work/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://www.framepack.work/ja.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.framepack.work/"/>
+    </url>
 
+    <!-- Japanese Version -->
+    <url>
+        <loc>https://www.framepack.work/ja.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.framepack.work/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://www.framepack.work/ja.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.framepack.work/"/>
+    </url>
 
-<url>
-  <loc>https://www.framepack.work/</loc>
-  <lastmod>2025-04-22T02:08:13+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.framepack.work/index.html</loc>
-  <lastmod>2025-04-22T02:08:14+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+    <!-- Tutorial Section -->
+    <url>
+        <loc>https://www.framepack.work/#tutorial</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
+    <!-- Features Section -->
+    <url>
+        <loc>https://www.framepack.work/#features</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
+    <!-- Example Showcase -->
+    <url>
+        <loc>https://www.framepack.work/#examples</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- GitHub Repository -->
+    <url>
+        <loc>https://github.com/lllyasviel/FramePack</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
