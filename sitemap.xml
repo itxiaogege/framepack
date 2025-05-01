@@ -26,23 +26,23 @@
     <!-- Tutorial Section -->
     <url>
         <loc>https://www.framepack.work/#tutorial</loc>
-        <lastmod>2024-03-20</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-05-02</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Features Section -->
     <url>
         <loc>https://www.framepack.work/#features</loc>
-        <lastmod>2024-03-20</lastmod>
-        <changefreq>monthly</changefreq>
+        <lastmod>2025-05-02</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Example Showcase -->
     <url>
         <loc>https://www.framepack.work/#examples</loc>
-        <lastmod>2024-03-20</lastmod>
+        <lastmod>2025-05-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -50,7 +50,7 @@
     <!-- GitHub Repository -->
     <url>
         <loc>https://github.com/lllyasviel/FramePack</loc>
-        <lastmod>2024-03-20</lastmod>
+        <lastmod>2025-05-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
