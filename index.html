@@ -67,7 +67,7 @@
     }
     </script>
     <style>
-        /* .brand-logo {
+        .brand-logo {
             font-size: 2.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ff7a18, #af002d 45%, #319197);
@@ -75,14 +75,6 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
-        } */
-        .brand-logo {
-            text-indent: -300px;
-            display: block;
-            height: 46px;
-             width: 160px;
-            background-image: url(images/brand-logo.png);
-            background-size: 100% 100%;
         }
         
         .enhanced-title {
@@ -784,15 +776,11 @@
     <!-- Navigation bar -->
     <header class="header">
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="navbar-brand">FramePack</a>
-                <!--<a href="index.html" class="navbar-brand brand-logo">FramePack</a>-->
-                <!-- <a href="index.html" class="navbar-brand">
-                    <img src="images/brand-logo.png" alt="FramePack" title="FramePack"
-                </a> -->
-                <!-- <div class="menu-toggle d-lg-none">
+            <div class="navbar">
+                <a href="index.html" class="navbar-brand brand-logo">FramePack</a>
+                <div class="menu-toggle d-lg-none">
                     <i data-lucide="menu"></i>
-                </div> -->
+                </div>
                 <ul class="navbar-nav d-none d-lg-flex">
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">Home</a>
@@ -809,7 +797,7 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
 
