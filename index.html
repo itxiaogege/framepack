@@ -786,10 +786,10 @@
                         <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#features" class="nav-link">Features</a>
+                        <a href="index.html#features" class="nav-link">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#tutorial" class="nav-link">Tutorial</a>
+                        <a href="index.html#tutorial" class="nav-link">Tutorial</a>
                     </li>
                     <li class="nav-item">
                         <a href="ja.html" class="nav-link language-switch">
@@ -924,11 +924,12 @@
                         <h3><i data-lucide="download"></i> Installation Guide</h3>
                         <div class="tutorial-content">
                             <div class="platform-tabs">
-                                <button class="platform-tab active" data-platform="windows">Windows</button>
-                                <button class="platform-tab" data-platform="linux">Linux</button>
+                                <a class="platform-tab active" data-platform="framepack-windows" id="framepack-windows">Windows</a>
+                                <a class="platform-tab" data-platform="framepack-linux" id="framepack-linux">Linux</a>
+                                <a class="platform-tab" data-platform="framepack-MacOS" id="framepack-MacOS">MacOS</a>
                             </div>
                             
-                            <div class="platform-content active" id="windows-install">
+                            <div class="platform-content active" id="framepack-windows-install">
                                 <ol class="install-steps">
                                     <li><a href="https://github.com/lllyasviel/FramePack" target="_blank" class="download-link"><i data-lucide="download-cloud"></i> Download One-Click Installer (CUDA 12.6 + PyTorch 2.6)</a></li>
                                     <li>Extract the downloaded file</li>
@@ -941,7 +942,7 @@
                                 </div>
                             </div>
                             
-                            <div class="platform-content" id="linux-install">
+                            <div class="platform-content" id="framepack-linux-install">
                                 <p>Recommended to use a separate Python 3.10 environment:</p>
                                 <pre class="code-block"><code>pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 pip install -r requirements.txt
@@ -950,8 +951,25 @@ pip install -r requirements.txt
 python demo_gradio.py</code></pre>
                                 <p>Supports --share, --port, --server parameters.</p>
                             </div>
+                            <div class="platform-content" id="framepack-MacOS-install">
+                                <p>FramePack recommends using Python 3.10. If you have homebrew installed, you can install Python 3.10 using brew.</p>
+                                <pre class="code-block"><code>brew install python@3.10</code></pre>
+                                <p>To install dependencies.</p>
+                                <pre class="code-block"><code>pip3.10 install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+pip3.10 install -r requirements.txt</code></pre>
+                                <h2>Starting FramePack on macOS</h2>
+                                <p>To start the GUI, run and follow the instructions in the terminal to load the webpage:</p>
+                                <pre class="code-block"><code>python3.10 demo_gradio.py</code></pre>
+                                <h2>UPDATE: F1 Support Merged In</h2>
+                                <p>Pull the latest changes from my branch in GitHub</p>
+                                <pre class="code-block"><code>git pull</code></pre>
+                              
+                                <p>To start the F1 version of FramePack, run and follow the instructions in the terminal to load the webpage:</p>
+                                <pre class="code-block"><code>python3.10 demo_gradio_f1.py</code></pre>
+                            </div>
                         </div>
                     </div>
+                    
                     
                     <!-- GUI Usage Guide -->
                     <div class="tutorial-block">
@@ -1169,12 +1187,10 @@ python demo_gradio.py</code></pre>
                 <p>&copy; 2025 FramePack - Creating professional videos with advanced AI technology</p>
                 <div class="footer-links">
                     <a href="index.html">Home</a>
-                    <a href="#features">Features</a>
-                    <a href="#examples">Examples</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#privacy">Privacy</a>
-                    <a href="#terms">Terms</a>
-                    <a href="#support">Support</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#framepack-windows">Windows</a>
+                    <a href="index.html#framepack-linux">Linux</a>
+                    <a href="index.html#framepack-MacOS">MacOS</a>
                 </div>
             </div>
         </div>

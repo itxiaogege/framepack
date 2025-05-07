@@ -28,7 +28,7 @@
     <meta name="author" content="FramePack">
     <meta name="robots" content="index, follow">
     <meta name="google-adsense-account" content="ca-pub-8193191091272723">
-    <!-- Open Graph / Facebook -->
+    <!-- オープングラフ / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.framepack.work/ja/">
     <meta property="og:title" content="FramePack - 革新的なAI動画生成">
@@ -927,16 +927,17 @@
                 <p class="section-description">インストールから高品質なAI動画生成までの完全ガイド</p>
                 
                 <div class="tutorial-container">
-                    <!-- Installation Guide -->
+                    <!-- インストールガイド -->
                     <div class="tutorial-block">
                         <h3><i data-lucide="download"></i> インストールガイド</h3>
                         <div class="tutorial-content">
                             <div class="platform-tabs">
-                                <button class="platform-tab active" data-platform="windows">Windows</button>
-                                <button class="platform-tab" data-platform="linux">Linux</button>
+                                <button class="platform-tab active" data-platform="framepack-windows" id="framepack-windows">Windows</button>
+                                <button class="platform-tab" data-platform="framepack-linux" id="framepack-linux">Linux</button>
+                                <button class="platform-tab" data-platform="framepack-MacOS" id="framepack-MacOS">MacOS</button>
                             </div>
                             
-                            <div class="platform-content active" id="windows-install">
+                            <div class="platform-content active" id="framepack-windows-install">
                                 <ol class="install-steps">
                                     <li><a href="https://github.com/lllyasviel/FramePack" target="_blank" class="download-link"><i data-lucide="download-cloud"></i> ワンクリックインストーラーをダウンロード（CUDA 12.6 + PyTorch 2.6）</a></li>
                                     <li>ダウンロードしたファイルを解凍</li>
@@ -949,7 +950,7 @@
                                 </div>
                             </div>
                             
-                            <div class="platform-content" id="linux-install">
+                            <div class="platform-content" id="framepack-linux-install">
                                 <p>Python 3.10の別環境を使用することを推奨：</p>
                                 <pre class="code-block"><code>pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 pip install -r requirements.txt
@@ -958,10 +959,26 @@ pip install -r requirements.txt
 python demo_gradio.py</code></pre>
                                 <p>--share、--port、--serverパラメータをサポート。</p>
                             </div>
+                            <div class="platform-content" id="framepack-MacOS-install">
+                                <p>FramePackはPython 3.10を使用することを推奨します。自作プログラムをインストールしている場合は、brewを使用してPython 3.10をインストールすることができます</p>
+                                <pre class="code-block"><code>brew install python@3.10</code></pre>
+                                <p>依存関係をインストールします。</p>
+                                <pre class="code-block"><code>pip3.10 install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+pip3.10 install -r requirements.txt</code></pre>
+                                <h2>macOS上でFramePackを起動する</h2>
+                                <p>GUIを起動するには、端末の指示に従ってWebページを実行してロードします。</p>
+                                <pre class="code-block"><code>python3.10 demo_gradio.py</code></pre>
+                                <h2>更新：F 1サポートマージ済み</h2>
+                                <p>GitHubのマイブランチから最新の変更を抽出</p>
+                                <pre class="code-block"><code>git pull</code></pre>
+                              
+                                <p>F 1バージョンのFramePackを起動するには、端末の指示に従ってページをロードします。</p>
+                                <pre class="code-block"><code>python3.10 demo_gradio_f1.py</code></pre>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- GUI Usage Guide -->
+                    <!-- GUI使用ガイド -->
                     <div class="tutorial-block">
                         <h3><i data-lucide="layout"></i> GUI使用ガイド</h3>
                         <div class="tutorial-content">
@@ -985,7 +1002,7 @@ python demo_gradio.py</code></pre>
                         </div>
                     </div>
                     
-                    <!-- Prompt Writing Guide -->
+                    <!-- クイックライティングガイド -->
                     <div class="tutorial-block">
                         <h3><i data-lucide="message-square"></i> プロンプト作成ガイド</h3>
                         <div class="tutorial-content">
@@ -1003,7 +1020,7 @@ python demo_gradio.py</code></pre>
                         </div>
                     </div>
                     
-                    <!-- Parameter Optimization -->
+                    <!-- パラメータ最適化 -->
                     <div class="tutorial-block">
                         <h3><i data-lucide="sliders"></i> パラメータ最適化</h3>
                         <div class="tutorial-content">
@@ -1058,7 +1075,7 @@ python demo_gradio.py</code></pre>
                         </div>
                     </div>
                     
-                    <!-- Technical Principles -->
+                    <!-- 技術原理 -->
                     <div class="tutorial-block">
                         <h3><i data-lucide="cpu"></i> 技術原理</h3>
                         <div class="tutorial-content">
@@ -1096,7 +1113,7 @@ python demo_gradio.py</code></pre>
             </div>
         </section>
         
-        <!-- Create your own video -->
+        <!-- 独自のビデオを作成する -->
         <section id="generate" class="create-your-own animate">
             <div class="container">
                 <div class="create-card">
@@ -1136,7 +1153,7 @@ python demo_gradio.py</code></pre>
     
     </main>
 
-    <!-- Video Modal -->
+    <!-- ビデオモード -->
     <div class="video-modal" id="videoModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -1170,26 +1187,24 @@ python demo_gradio.py</code></pre>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- フッター -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
                 <p>&copy; 2025 FramePack - 先進的なAI技術でプロフェッショナルな動画を作成</p>
                 <div class="footer-links">
                     <a href="index.html">ホーム</a>
-                    <a href="#features">機能</a>
-                    <a href="#examples">サンプル</a>
-                    <a href="#contact">お問い合わせ</a>
-                    <a href="#privacy">プライバシー</a>
-                    <a href="#terms">利用規約</a>
-                    <a href="#support">サポート</a>
+                    <a href="index.html#features">機能</a>
+                    <a href="index.html#framepack-windows">Windows</a>
+                    <a href="index.html#framepack-linux">Linux</a>
+                    <a href="index.html#framepack-MacOS">MacOS</a>
                 </div>
             </div>
         </div>
     </footer>
 
 
-    <!-- Structured Data for SEO -->
+    <!-- SEO構造化データ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1227,7 +1242,7 @@ python demo_gradio.py</code></pre>
     }
     </script>
 
-    <!-- JavaScript -->
+    <!-- スクリプト＃スクリプト＃ -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/lucide.min.js"></script>
     <script src="js/translations.js"></script>
