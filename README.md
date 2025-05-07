@@ -1,109 +1,110 @@
-# https://www.framepack.work - 视频作品案例展示
+# https://www.framepack.work - Video Showcase
 
-这是一个现代化的视频案例展示网站，用于展示AI生成的各类视频作品。项目包含响应式布局设计、动态交互效果和现代UI风格。
+This is a modern video showcase website for displaying various AI-generated video works. The project features a responsive layout, dynamic interactive effects, and a modern UI style.
 
-## 项目结构
+## Project Structure
 
 ```
 project/
 │
 ├── css/
-│   ├── main.css         # 主要样式文件
-│   └── examples.css     # 案例页面特定样式
+│   ├── main.css         # Main stylesheet
+│   └── examples.css     # Styles specific to the examples page
 │
 ├── js/
-│   ├── main.js          # 主要JavaScript功能
-│   └── examples.js      # 案例页面特定功能
+│   ├── main.js          # Main JavaScript functionality
+│   └── examples.js      # JavaScript for the examples page
 │
-├── images/              # 项目图片资源
+├── images/              # Image assets
 │
-└── index.html           # 主页面
+└── index.html           # Main page
 ```
 
-## 功能特点
+## Features
 
-### 视频案例展示
-- 分类筛选功能，可按不同类型查看视频
-- 响应式视频卡片布局
-- 视频预览缩略图和播放功能
+### Video Showcase
+- Category filtering to view videos by type
+- Responsive video card layout
+- Video preview thumbnails and playback
 
-### 视频模态框
-- 点击视频卡片打开详细视图
-- 视频播放器集成
-- 视频详情显示
-- 分享功能（微博、微信、QQ）
+### Video Modal
+- Click video cards to open detailed view
+- Integrated video player
+- Display of video details
+- Sharing features (Weibo, WeChat, QQ)
 
-### 用户体验
-- 自适应布局，支持各种设备
-- 平滑滚动和动画效果
-- 延迟加载和分页功能
-- 移动设备友好的导航
+### User Experience
+- Adaptive layout for all devices
+- Smooth scrolling and animation effects
+- Lazy loading and pagination
+- Mobile-friendly navigation
 
-### 视频类别
-- 文本生成视频
-- AI场景生成
-- 音频视觉化
-- 高级视频定制
-- 商业应用案例
+### Video Categories
+- Text-to-Video Generation
+- AI Scene Generation
+- Audio Visualization
+- Advanced Video Customization
+- Commercial Application Cases
 
-## 技术栈
+## Tech Stack
 
 - HTML5
-- CSS3 (Flexbox, Grid, 动画)
+- CSS3 (Flexbox, Grid, Animations)
 - JavaScript (ES6+)
 - Bootstrap 5
-- Lucide 图标库
+- Lucide Icon Library
 
-## 使用方法
+## Usage
 
-1. 克隆或下载本项目
-2. 在浏览器中打开 `index.html` 
-3. 浏览并与网站互动
+1. Clone or download this project
+2. Open `index.html` in your browser
+3. Browse and interact with the website
 
-## 自定义
+## Customization
 
-### 添加新视频
+### Adding a New Video
 
-要添加新的视频案例，按照以下格式向HTML中添加新的视频项：
+To add a new video case, insert a new video item into the HTML using the following format:
 
 ```html
-<div class="video-item col-lg-4 col-md-6 animate" data-category="你的类别">
-    <div class="video-card" data-video="视频URL">
+<div class="video-item col-lg-4 col-md-6 animate" data-category="Your Category">
+    <div class="video-card" data-video="Video URL">
         <div class="thumbnail">
             <div class="play-icon">
                 <i data-lucide="play"></i>
             </div>
-            <img src="图片URL" alt="视频标题">
+            <img src="Image URL" alt="Video Title">
         </div>
         <div class="video-info">
-            <h3>视频标题</h3>
-            <p>视频描述</p>
+            <h3>Video Title</h3>
+            <p>Video Description</p>
             <div class="tags">
-                <span>标签1</span>
-                <span>标签2</span>
+                <span>Tag 1</span>
+                <span>Tag 2</span>
             </div>
         </div>
     </div>
 </div>
 ```
 
-### 添加新类别
+### Adding a New Category
 
-要添加新的筛选类别，需要：
+To add a new filter category:
 
-1. 在筛选按钮区域添加新按钮
+1. Add a new button in the filter button area:
 ```html
-<button class="filter-btn" data-filter="新类别">新类别名称</button>
+<button class="filter-btn" data-filter="New Category">New Category Name</button>
 ```
 
-2. 确保对应的视频项添加了匹配的 `data-category` 属性
+2. Make sure the corresponding video items have the matching `data-category` attribute.
 
-## 注意事项
+## Notes
 
-- 页面使用了外部CDN资源，需要联网使用
-- 视频播放功能依赖于浏览器对HTML5视频的支持
-- 分享功能可能受到浏览器安全策略限制
+- The page uses external CDN resources and requires an internet connection
+- Video playback depends on browser support for HTML5 video
+- Sharing features may be limited by browser security policies
+- Learning address <a href="https://www.framepack.work">FramePack: Revolutionary AI Video Generation</a>
 
-## 许可
+## License
 
-本项目仅供学习和演示使用。 
+This project is for learning and demonstration purposes only. 
